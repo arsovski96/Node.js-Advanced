@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "41eeb211-971b-41ec-9299-13303f0cc162",
+		"name": "e-commerce-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26441673"
+	},
+	"item": [
+		{
+			"name": "ADD PRODUCTS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Adidas Trainers\",\r\n    \"description\": \"Trainers for crossfit and indoor sports\",\r\n    \"price\": 150,\r\n    \"reviews\": [{\"rating\":5, \"comment\": \"Great shoes\"}, {\"rating\":5, \"comment\": \"Nice\"}]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST PRODUCT BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/642b0f62e3c9d44c643094cb",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"642b0f62e3c9d44c643094cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH BY NAME",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/Adidas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"Adidas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
