@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "6fee286d-7241-45d5-8994-06671ea48e2c",
+		"name": "homework-customer-schema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26441673"
+	},
+	"item": [
+		{
+			"name": "ADD NEW CUSTOMER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"test@outlook.com\",\r\n    \"phone\": \"0202 202 022022\",\r\n    \"address\": \"blvd. 1234 , Macedonia\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL CUSTOMERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CUSTOMER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/customers/64392ab62512bc2942189bb7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"64392ab62512bc2942189bb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CUSTOMER BY ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Ivan Arsovski\",\r\n        \"email\": \"test@live.com\",\r\n        \"phone\": \"222 222 222\",\r\n        \"address\": \"blvd. Macedonia, Skopje\",\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/customers/64392ab62512bc2942189bb7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"64392ab62512bc2942189bb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CUSTOMER BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/customers/64392d790ef8dfa66390ea84",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"64392d790ef8dfa66390ea84"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
